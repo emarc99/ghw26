@@ -92,6 +92,53 @@
   --sidebar-accent-foreground: #121212;
   --sidebar-border: #2c2c2c;
   --sidebar-ring: #4a463c;
+  --paper-glow-a: rgba(90, 80, 60, 0.08);
+  --paper-glow-b: rgba(60, 55, 45, 0.1);
+  --paper-line: rgba(40, 35, 25, 0.015);
+  --paper-blend: multiply, multiply, normal, soft-light;
+}
+
+.dark {
+  /* Night edition: dark newsprint, pale ink, muted scarlet */
+  --paper: #141311;
+  --ink: #e6e1d4;
+  --rule: #c9c2b0;
+  --scarlet: #d45a5a;
+  --background: #141311;
+  --foreground: #e6e1d4;
+  --card: #1c1b18;
+  --card-foreground: #e6e1d4;
+  --popover: #1c1b18;
+  --popover-foreground: #e6e1d4;
+  --primary: #e6e1d4;
+  --primary-foreground: #141311;
+  --secondary: #24221e;
+  --secondary-foreground: #e6e1d4;
+  --muted: #24221e;
+  --muted-foreground: #a39c8c;
+  --accent: #24221e;
+  --accent-foreground: #e6e1d4;
+  --destructive: #d45a5a;
+  --border: #c9c2b0;
+  --input: #2e2c27;
+  --ring: #a39c8c;
+  --chart-1: #e6e1d4;
+  --chart-2: #a39c8c;
+  --chart-3: #d45a5a;
+  --chart-4: #6b6558;
+  --chart-5: #c9c2b0;
+  --sidebar: #1c1b18;
+  --sidebar-foreground: #e6e1d4;
+  --sidebar-primary: #e6e1d4;
+  --sidebar-primary-foreground: #141311;
+  --sidebar-accent: #24221e;
+  --sidebar-accent-foreground: #e6e1d4;
+  --sidebar-border: #c9c2b0;
+  --sidebar-ring: #a39c8c;
+  --paper-glow-a: rgba(230, 225, 212, 0.04);
+  --paper-glow-b: rgba(180, 160, 120, 0.06);
+  --paper-line: rgba(230, 225, 212, 0.03);
+  --paper-blend: soft-light, soft-light, normal, overlay;
 }
 
 @layer base {
@@ -108,17 +155,22 @@
     font-family: var(--font-body), "Times New Roman", serif;
     background-color: var(--paper);
     background-image:
-      radial-gradient(ellipse at 20% 0%, rgba(90, 80, 60, 0.08), transparent 50%),
-      radial-gradient(ellipse at 80% 100%, rgba(60, 55, 45, 0.1), transparent 45%),
+      radial-gradient(ellipse at 20% 0%, var(--paper-glow-a), transparent 50%),
+      radial-gradient(ellipse at 80% 100%, var(--paper-glow-b), transparent 45%),
       repeating-linear-gradient(
         0deg,
         transparent,
         transparent 2px,
-        rgba(40, 35, 25, 0.015) 2px,
-        rgba(40, 35, 25, 0.015) 3px
+        var(--paper-line) 2px,
+        var(--paper-line) 3px
       ),
       url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
-    background-blend-mode: multiply, multiply, normal, soft-light;
+    background-blend-mode: var(--paper-blend);
+    color-scheme: light;
+  }
+
+  .dark body {
+    color-scheme: dark;
   }
 }
 
