@@ -37,3 +37,7 @@ Email currently uses `emmanueladedejiaroso@gmail.com` (from the repo author). Ch
 ## Design notes
 
 Broadsheet layout on purpose: masthead with the name as the hero brand, hairline rules, date line, multi-column sections (About / Work / Skills / Contact), newsprint paper texture, Libre Baskerville + Newsreader + IBM Plex Mono.
+
+### Day / Night edition
+
+Use the **Day edition** / **Night edition** control in the masthead dateline strip to toggle light and dark newsprint. Preference is saved in `localStorage` via `next-themes` (key: `daily-portfolio-theme`) and restores on reload.

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { NewspaperNav } from "@/components/newspaper-nav";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 
 /** Fixed edition date for the broadsheet masthead (stable for static build). */
@@ -50,10 +51,13 @@ export default function Home() {
       <header className="relative flex min-h-[100svh] flex-col px-4 pb-10 pt-5 sm:px-8 sm:pt-6 lg:px-12">
         <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col">
           {/* Dateline strip */}
-          <div className="animate-fade-up flex flex-wrap items-baseline justify-between gap-2 border-b border-ink/80 pb-2 font-mono-news text-[0.65rem] uppercase tracking-[0.16em] text-ink/70 sm:text-[0.7rem]">
+          <div className="animate-fade-up flex flex-wrap items-center justify-between gap-x-3 gap-y-2 border-b border-ink/80 pb-2 font-mono-news text-[0.65rem] uppercase tracking-[0.16em] text-ink/70 sm:text-[0.7rem]">
             <span>Vol. I · No. 1 · Global Hack Week</span>
             <time dateTime={EDITION_ISO}>{EDITION_DATE}</time>
-            <span className="hidden text-scarlet sm:inline">Special edition</span>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="hidden text-scarlet sm:inline">Special edition</span>
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* Masthead — brand as hero */}
