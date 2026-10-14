@@ -248,15 +248,13 @@ export default function Home() {
               />
               <ContactLine
                 label="GitHub"
-                href="https://github.com/"
-                value="github.com/… — update username"
-                placeholder
+                href="https://github.com/emarc99"
+                value="github.com/emarc99"
               />
               <ContactLine
                 label="LinkedIn"
-                href="https://linkedin.com/"
-                value="linkedin.com/in/… — update profile"
-                placeholder
+                href="https://www.linkedin.com/in/emmanuel-aroso-002783169/"
+                value="linkedin.com/in/emmanuel-aroso-002783169"
               />
               <Button
                 render={<a href="mailto:emmanueladedejiaroso@gmail.com" />}

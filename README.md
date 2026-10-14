@@ -30,9 +30,8 @@ Several lines are marked as placeholders so the page stays honest until you fill
 | About / focus / availability | `#about` section copy and “Dateline” list |
 | Work items | `workItems` array (especially the “Edit me” stub) |
 | Skills list | `skills` array |
-| GitHub / LinkedIn URLs | `#contact` `ContactLine` entries |
 
-Email currently uses `emmanueladedejiaroso@gmail.com` (from the repo author). Change the `mailto:` links if you prefer another address.
+Contact links: email `emmanueladedejiaroso@gmail.com`, [GitHub](https://github.com/emarc99), [LinkedIn](https://www.linkedin.com/in/emmanuel-aroso-002783169/).
 
 ## Design notes
 
